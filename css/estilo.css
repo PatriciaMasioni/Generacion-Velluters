@@ -1,0 +1,516 @@
+/************************************************************
+
+Theme name : Microsite
+Description:
+Author: Patricia Masioni _ Sebastian Salcedo
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0
+Tags: responsiveness, personal project.
+
+**************************************************************
+
+Table of Contents:
+
+
+	0. GLOBAL
+	1. HEADER
+	2.1 INTRO_Background_image
+	2.2 INTRO_content
+	3. SECTION TALLER (vídeo)
+	4. EXPOSICIÓN
+	5. FOOTER
+	6. MEDIA QUERIES
+
+
+
+**************************************************************/
+
+
+
+
+/************************************************
+  0. GLOBAL
+************************************************/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-family: "Space Mono";
+	color: #555;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;/*para que herede el color de su contenedor*/
+	cursor: pointer;/*para que el cursor se convierta en manita*/
+	opacity: 0.9;
+}
+
+a:hover{
+    opacity:1;
+}
+
+hr{
+	display: none;
+}
+
+img{
+    width: 100%;
+}
+
+
+section{
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+}
+
+
+
+.boton-grande{
+    background-color: white;
+    color:darkslategrey;
+    padding:20px 50px;
+    border-radius:50px;
+    text-transform:uppercase;
+    text-align:center;
+    font-weight:800;
+    z-index:5;
+}
+
+.boton-pequenyo{
+    background-color: #f11458;
+    width:30px;
+    height:30px;
+    position:fixed;
+    bottom:40px;
+    right:40px;
+}
+
+
+
+/************************************************
+  1. HEADER
+************************************************/
+
+
+header{
+    top:0;
+		position:fixed;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    width:100%;
+    color: #e52c1f;
+    padding:35px 100px;
+    z-index:100;
+	/*	background-color: rgba(248, 250, 250, 0.5);
+	*/
+}
+
+.languages {
+  height: 100vh;
+  top: 0;
+  right: 0;
+  position: fixed;
+  margin: 0 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.idiomas {
+  float: right;
+  border-left: solid 0.1rem black;
+
+}
+
+.idiomas li{
+  padding: 1rem;
+}
+
+
+.menu li:hover{
+	border-bottom: solid 0.07rem darkslategrey;
+	padding: 0.4rem;
+	transition: ease-in-out 0.3s;
+}
+
+
+.menu{
+    display:flex;
+}
+
+.menu li{
+	margin: 0 15px;
+}
+
+
+
+
+/************************************************
+  2.1 INTRO_Background_image
+************************************************/
+
+.intro{
+
+	background: url(../img/mockup/3.jpg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+	width:100%;
+  overflow: hidden;
+
+
+}
+
+.intro::after{
+	content: '';
+	background: url(../img/header.gif) no-repeat center center;
+	background-size: cover;
+	min-height: 83vh;
+	width:100%;
+
+
+}
+
+/************************************************
+  3. SECTION TALLER (vídeo)
+************************************************/
+
+
+
+#taller{
+    height: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+		background-color: white;
+
+}
+
+video{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+/************************************************
+  4. EXPOSICIÓN
+************************************************/
+
+.posters{
+	max-width: 280px;
+	max-height: 360px;
+
+}
+
+.exposicioncontenedor{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    background-color: white;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+
+.exposicioncontenedor .imagengaleria{
+    position:relative;
+    margin:10px;
+    padding:0px;
+    margin-top: 200px;
+		border-bottom: #f11458 solid;
+}
+
+.exposicioncontenedor .imagengaleria.sinmargen{
+   margin-top: 10px;
+
+	 border-bottom: #f11458  solid;
+}
+
+.exposicioncontenedor .imagengaleria .infocarteles{
+    display:  block;
+    width: 100%;
+    text-align: center;
+    color: black;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+
+.exposicioncontenedor .imagengaleria::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.3;
+    padding: 0px;
+}
+
+.exposicioncontenedor .imagengaleria:hover::after{
+    opacity: 0;
+}
+
+
+
+#content::after{
+ content: '';
+ background: url(../img/mockup/4.jpg) no-repeat center center fixed;
+ background-size: cover;
+ min-height: 30vh;
+ width:100%;
+}
+/************************************************
+  5. SECTION_Info
+************************************************/
+
+
+ #amaltea{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+		align-content: center;
+		justify-content: center;
+    background-color:white;
+}
+
+
+#articles{
+	width: 100%;
+	height: 100vh;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+}
+
+
+.idamaltea{
+	width: 50%;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+#idamaltea{
+	width: 30%;
+	align-content: center;
+	justify-content: center;
+
+}
+
+.textoamaltea{
+		padding: 1.5rem;
+}
+
+
+#text{
+	color: #008da0;
+}
+
+
+
+/************************************************
+  6. FOOTER
+************************************************/
+
+
+footer{
+    display:flex;
+		justify-content: center;
+		align-content: center;
+		flex-direction: column;
+		color: #fff;
+		background-color: #414a4f;
+		padding: 2rem 0;
+    font-family: 'Space Mono', sans-serif;
+
+}
+
+#footer{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	margin-bottom: 2rem;
+}
+
+footer ul{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	font-size: 32px;
+}
+
+footer ul li{
+	margin: 0 8px;
+}
+
+
+
+/************************************************
+  7. MEDIA QUERIES
+************************************************/
+
+@media only screen and (max-width: 420px){
+
+
+	header{
+		padding-left: 0;
+		padding-right: 0;
+		background-color: white;
+	}
+
+	.menu li{
+		margin: 0 0.5rem;
+	}
+
+	.languages{
+		margin: 0;
+		display: none;
+	}
+
+	.idiomas{
+		border-left: none;
+	}
+
+	.intro h1{
+	    font-size: 4rem;
+	}
+
+	.intro h3{
+	    font-size: 1.1rem;
+			width : 95%;
+			margin: 2rem 0;
+	}
+
+	#taller{
+	    height: 10vh;
+	}
+
+	video{
+	    width: 100%;
+	    height: 10vh;
+	    display: flex;
+	    justify-content: center;
+	    align-content: center;
+	}
+
+   .exposicioncontenedor{
+		background-color: white;
+	}
+
+   .exposicioncontenedor .imagengaleria{
+
+		    margin-top: 0.5rem;
+				resize: none;
+		}
+
+		.exposicioncontenedor .imagengaleria.sinmargen{
+		   margin-top: 0.5rem;
+			 resize: none;
+		}
+
+		.exposicioncontenedor .imagengaleria::after{
+		    opacity: 0;
+		}
+
+	#amaltea{
+		 display: flex;
+		 flex-direction: column;
+ }
+
+ #articles{
+ 	flex-wrap: nowrap;
+ }
+
+ #idamaltea{
+ 	width: 60%;
+ }
+
+ .idamaltea{
+ 	  width: 100%;
+ }
+
+ .textoamaltea{
+	 font-size: 0.7rem;
+	 padding: 0;
+ }
+
+ footer{
+	 height: 10rem;
+ }
+
+ #footer{
+	font-weight: lighter;
+ 	margin: 1rem;
+ }
+
+ footer ul{
+ 	font-size: 32px;
+ }
+
+ footer ul li{
+ 	margin: 0rem ;
+ }
+
+}
+
+
+@media (max-width: 800px){
+    header{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+		#taller{
+				height: 100vh;
+		}
+
+		video{
+				width: 100%;
+				height: 65vh;
+		}
+
+		#amaltea{
+			 display: flex;
+			 flex-direction: column;
+			 justify-content: center;
+			 align-content: center;
+	 }
+
+		#articles{
+		 flex-wrap: nowrap;
+		}
+
+		#idamaltea{
+		 width: 60%;
+		}
+
+		.idamaltea{
+			 width: 90%;
+		}
+
+}
